@@ -18,37 +18,29 @@ public class JavaCondicional {
      */
     public static void main(String[] args) {
      
-        int opinion;
+        int tipoMotor;
         Scanner leer = new Scanner(System.in);
-        System.out.println("Clasifique la peli del 1 al 5 estrellas");
-        opinion = leer.nextInt();
+        do {
+            System.out.println("Ingrese un valor entre 1 y 4: ");
+            tipoMotor = leer.nextInt();
         
-        if(opinion >= 1 && opinion <= 5){
-            switch (opinion){
+            switch (tipoMotor){
                 case 1: 
-                    System.out.println("Solo 1 estrellas? morite");
+                    System.out.println("La bomba es una bomba de agua");
                     break;
                 case 2:
-                    System.out.println("Solo 2 estrellas? gay");
+                    System.out.println("La bomba es una bomba de gasolina");
                     break;
                 case 3:
-                    System.out.println("Solo 3 estrellas? forro");
+                    System.out.println("La bomba es una bomba de hormigon");
                     break;
                 case 4:
-                    System.out.println("4 estrellas gooood");
+                    System.out.println("La bomba es una bomba de pasta alimenticia");
                     break;
-                case 5:
-                    System.out.println("PERFECT");
+                default: 
+                    System.out.println("No existe un valor válido ingresado, intente de nuevo");
                     break;
-            }
-            
-        }else if(opinion < 0) {
-            System.out.println("Opinion negativa? posta morite");
-        }else if(opinion == 0) {
-            System.out.println("El valor "+opinion+ " no se toma en cuenta");
-        }else{
-            System.out.println("SUPER GOOOOOOOOOOOD");
-        }
+            } 
+        }while(tipoMotor < 1 || tipoMotor > 4);
     }
-    
 }
