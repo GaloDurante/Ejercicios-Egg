@@ -29,6 +29,19 @@ public class Ejercicio22 {
         System.out.println("Ingrese valor D: ");
         d = leer.nextInt();
         
+        //cambiar valores
+        aux = a;
+        a = d;
+        d = b;
+        b = c;
+        c = aux;
+        
+        System.out.println("Los valores cambiados son: ");
+        System.out.println("A: "+a);
+        System.out.println("B: "+b);
+        System.out.println("C: "+c);
+        System.out.println("D: "+d);
+        
     }
     
 }
