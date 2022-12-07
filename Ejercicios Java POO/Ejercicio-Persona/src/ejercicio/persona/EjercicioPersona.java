@@ -6,12 +6,10 @@
 package ejercicio.persona;
 
 import Entidad.Persona;
-import java.util.Scanner;
 
 
 public class EjercicioPersona {
 
-  
     public static void main(String[] args) {
         
         //instanciar con constructor
@@ -22,6 +20,8 @@ public class EjercicioPersona {
         System.out.println(p1.getNombre());
         //muestra todo el objeto con sus atributos
         System.out.println(p1.toString());
+        //usar metodo void
+        p1.mostrarAtributos(p1);
         
     }
 }

@@ -7,8 +7,12 @@ public class Persona {
     private String nombre;
     private int edad;
     private int dni;
+    //constructor vacio
 
-    //constructor
+    public Persona() {
+        
+    }
+    //constructor con parametros
     public Persona(String nombre, int edad, int dni) {
         this.nombre = nombre;
         this.edad = edad;
@@ -47,8 +51,10 @@ public class Persona {
     }
     
     //metodo
-//    public void mostrarAtributos(Persona p){
-//        return "nombre: "+p.getNombre()+"  edad: "+p.getEdad()+"  dni: "+p.getDni();
-//    }
+   public void mostrarAtributos(Persona p){
+        System.out.println("nombre: "+p.getNombre());
+        System.out.println("edad: "+p.getEdad());
+        System.out.println("dni: "+p.getDni());
+    }
     
 }
