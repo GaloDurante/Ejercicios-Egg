@@ -5,6 +5,9 @@
  */
 package ejercicio4;
 
+import ejercicio4.Entidades.Rectangulo;
+import ejercicio4.Servicios.ServiciosRectangulo;
+
 /**
  *
  * @author PC
@@ -15,7 +18,19 @@ public class Ejercicio4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int superficie, perimetro;
+        
+        ServiciosRectangulo sr = new ServiciosRectangulo();
+        Rectangulo rect = sr.crearRectangulo();
+        
+        superficie = sr.calcularSuperficie(rect);
+        System.out.println("Superficie: "+superficie);
+        
+        perimetro = sr.calcularPerimetro(rect);
+        System.out.println("Perimetro: "+perimetro);
+        
+        System.out.println("RECTANGULO: ");
+        sr.dibujarRectangulo(rect);
     }
     
 }
