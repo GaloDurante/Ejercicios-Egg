@@ -68,7 +68,9 @@ public class ServiciosCadena {
         System.out.println("La letra "+letra.toUpperCase()+" se repite: "+contLetra);
     }
     
-    public void compararLongitud(Cadena c, String cadena){
+    public void compararLongitud(Cadena c){
+        System.out.println("Ingrese una frase para comparar: ");
+        String cadena = leer.nextLine();
         
         if(c.getLongitud() > cadena.length()){
             System.out.println("La cadena ingresada es menor al objeto.");
@@ -77,5 +79,41 @@ public class ServiciosCadena {
         }else{
             System.out.println("La cadena ingresada es mayor al objeto.");
         }
+    }
+    
+    public void unirFrases(Cadena c){
+        System.out.println("Ingrese una frase para unir: ");
+        String cadena = leer.nextLine();
+     
+        String fraseUnida = c.getFrase().concat(cadena);
+        System.out.println("La nueva frase es: "+fraseUnida);
+    }
+    
+    public void reemplazarLetra(Cadena c, String letra){
+        String frase = c.getFrase().toLowerCase();
+        String aux="";
+        
+        for (int i = 0; i < c.getLongitud(); i++) {
+            if(frase.substring(i, i+1).equals("a")){
+                aux = aux.concat(letra);
+            }else{
+                aux = aux.concat(frase.substring(i, i+1));
+            }
+        }
+        System.out.println("La frase modificada es:");
+        System.out.println(aux);
+    }
+    
+    public void contieneLetra(Cadena c, String letra){
+        String frase = c.getFrase();
+        boolean bandera = false;
+        
+        for (int i = 0; i < c.getLongitud(); i++) {
+            if (frase.substring(i, i+1).equals(letra)){
+                bandera = true;
+                break;
+            }
+        }
+        System.out.println("Contiene la letra?: "+bandera);
     }
 }

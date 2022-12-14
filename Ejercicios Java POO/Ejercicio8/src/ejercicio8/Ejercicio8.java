@@ -20,6 +20,7 @@ public class Ejercicio8 {
      */
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
+        String letra;
         int op;
         ServiciosCadena sc = new ServiciosCadena();
         
@@ -46,19 +47,24 @@ public class Ejercicio8 {
                     break;
                 case 3: 
                     System.out.println("Ingrese la letra que quiere ver repetida: ");
-                    String letra = leer.next();
+                    letra = leer.next();
                     sc.vecesRepetido(frase, letra);
                     break;
                 case 4:
-                    System.out.println("Ingrese una frase para comparar: ");
-                    String cadena = leer.next();
-                    sc.compararLongitud(frase, cadena);
+                    sc.compararLongitud(frase);
                     break;
                 case 5: 
+                    sc.unirFrases(frase);
                     break;
                 case 6:
+                    System.out.println("Ingrese una letra para ver lo que pasa: ");
+                    letra = leer.next();
+                    sc.reemplazarLetra(frase, letra);
                     break;
                 case 7: 
+                    System.out.println("Ingrese una letra para ver lo que pasa: ");
+                    letra = leer.next();
+                    sc.contieneLetra(frase, letra);
                     break;
                 case 0:
                     System.out.println("Saliendo...");
@@ -69,6 +75,7 @@ public class Ejercicio8 {
         }while(op != 0);
         
     }
+    
     public static void llenarFrase(Cadena c){
         Scanner leer = new Scanner(System.in);
         
